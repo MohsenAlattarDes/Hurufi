@@ -1,0 +1,25 @@
+.container {
+  margin: 1.5rem 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+}
+
+.item {
+  text-align: center;
+}
+
+.form {
+  font-family: var(--font-arabic);
+  font-size: 2rem;
+  direction: rtl;
+  margin-bottom: 0.25rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}

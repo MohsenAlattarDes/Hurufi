@@ -1,0 +1,7 @@
+.entryCard {
+  margin-bottom: 2rem;
+}
+
+.entryCard:last-child {
+  margin-bottom: 0;
+}

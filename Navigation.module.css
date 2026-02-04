@@ -1,0 +1,31 @@
+.nav {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.link:hover {
+  color: var(--text);
+}

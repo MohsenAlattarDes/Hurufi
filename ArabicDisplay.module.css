@@ -1,0 +1,17 @@
+.container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.text {
+  font-family: var(--font-arabic);
+  font-size: 2.5rem;
+  direction: rtl;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}

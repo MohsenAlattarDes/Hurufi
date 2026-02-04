@@ -1,0 +1,218 @@
+/* ==========================================
+   Arabic Typography Microsite
+   Global Typography System
+   ========================================== */
+
+/* ==========================================
+   CSS Custom Properties
+   ========================================== */
+
+:root {
+  /* Colors */
+  --color-text: #1a1a1a;
+  --color-background: #faf9f7;
+  --color-accent-warm: #d4634a;
+  --color-accent-cool: #4a7c9e;
+  --color-subtle: #6b6b6b;
+  
+  /* Typography Scale (1.25 ratio) */
+  --scale-1: 1rem;      /* 16px base */
+  --scale-2: 1.25rem;   /* 20px */
+  --scale-3: 1.563rem;  /* 25px */
+  --scale-4: 1.953rem;  /* 31px */
+  --scale-5: 2.441rem;  /* 39px */
+  --scale-6: 3.052rem;  /* 49px */
+  
+  /* Spacing Scale */
+  --space-1: 0.5rem;    /* 8px */
+  --space-2: 1rem;      /* 16px */
+  --space-3: 1.5rem;    /* 24px */
+  --space-4: 2rem;      /* 32px */
+  --space-5: 3rem;      /* 48px */
+  --space-6: 4rem;      /* 64px */
+  --space-7: 6rem;      /* 96px */
+  --space-8: 8rem;      /* 128px */
+  
+  /* Layout */
+  --max-reading-width: 70ch;
+  --page-margin: var(--space-6);
+  --section-spacing: var(--space-7);
+  
+  /* Font Stacks */
+  --font-latin: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-arabic: 'Geeza Pro', 'Traditional Arabic', 'Arabic Typesetting', 'Scheherazade New', serif;
+}
+
+/* ==========================================
+   Reset & Base Styles
+   ========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-latin);
+  font-size: var(--scale-1);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* ==========================================
+   Typography Hierarchy
+   ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+}
+
+h1 {
+  font-size: var(--scale-6);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--scale-5);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--scale-4);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--scale-3);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: var(--scale-2);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--scale-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p {
+  margin-bottom: var(--space-3);
+  max-width: var(--max-reading-width);
+}
+
+/* ==========================================
+   Arabic Typography
+   ========================================== */
+
+[lang="ar"] {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  font-size: var(--scale-4); /* Minimum 32px for studyable text */
+  line-height: 1.8;
+}
+
+.arabic-large {
+  font-size: var(--scale-5);
+  line-height: 2;
+}
+
+.arabic-display {
+  font-size: var(--scale-6);
+  line-height: 2;
+}
+
+/* ==========================================
+   Links
+   ========================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+/* ==========================================
+   Layout Primitives
+   ========================================== */
+
+.container {
+  max-width: var(--max-reading-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
+}
+
+.section {
+  margin-bottom: var(--section-spacing);
+}
+
+/* ==========================================
+   Utilities
+   ========================================== */
+
+.subtle {
+  color: var(--color-subtle);
+}
+
+.accent-warm {
+  color: var(--color-accent-warm);
+}
+
+.accent-cool {
+  color: var(--color-accent-cool);
+}
+
+/* Remove default list styling */
+ul, ol {
+  list-style: none;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --page-margin: var(--space-4);
+    --section-spacing: var(--space-6);
+  }
+  
+  h1 {
+    font-size: var(--scale-5);
+  }
+  
+  h2 {
+    font-size: var(--scale-4);
+  }
+  
+  [lang="ar"] {
+    font-size: var(--scale-3);
+  }
+}
